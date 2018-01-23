@@ -14,6 +14,7 @@ they require different gates.
 
 example:
 Arrivals: [1000, 1200, 1300, 1330]
+
 Departures: [1130, 1430, 1330, 1500]
 
 Answer: 3, at 1:30 PM (1330) flights #2, 3, and 4 will all be at the airport.
@@ -30,6 +31,7 @@ Answer: 3
 
 The grid looks like this:
 X X X
+
 X X X
 
 And the possible ways to get from top left to bottom right are:
