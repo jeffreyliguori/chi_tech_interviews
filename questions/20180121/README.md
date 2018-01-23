@@ -36,8 +36,7 @@ X X X
 X X X
 
 And the possible ways to get from top left to bottom right are:
-Right Right Down
-Right Down Right
-Down Right Right
+Right Right Down, Right Down Right, Down Right Right.
 
-## I do not remember the remaining problems.
+## Other problems
+I do not remember the remaining problems. Feel free to add them here.
