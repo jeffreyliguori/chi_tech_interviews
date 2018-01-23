@@ -12,4 +12,8 @@ Here's our [website and blog](http://www.chicagotechinterviews.com/)
 
 This repository will contain all of our weeks problems as well as solutions.
 Anyone is welcome to contribute solutions, tests, etc. for any/all of the
-problems for the week. 
+problems for the week.
+
+None of the solutions here are guaranteed to be right, and if you wrote one of
+these questions and do not want the solution easily available on the internet
+feel free to ask for it to be taken down.
