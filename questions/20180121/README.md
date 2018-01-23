@@ -30,6 +30,7 @@ m = 3, n = 2
 Answer: 3
 
 The grid looks like this:
+
 X X X
 
 X X X
