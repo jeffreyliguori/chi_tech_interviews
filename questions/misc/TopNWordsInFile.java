@@ -32,7 +32,11 @@ class TopNWordsInFile {
 	}
     }
 
-    // Using my own node class and the countable property.
+    // Using my own node class and the countable property. We have one
+    // node for each frequency as we go through the list, and keep the
+    // nodes in order from least to most, so at the end we can just grab
+    // the nodes starting from most back (note: i should have made this
+    // doubly linked but i was lazy and this works).
     String[] FastGetTopNWordsInFile(List<String> fileList, int n) {
 	HashMap<String, Node> counts = new HashMap<>();
 	Node most = null;
@@ -67,6 +71,9 @@ class TopNWordsInFile {
 		counts.put(word, curr);
 	    }
 	}
+	    
+	// Note: this was my lazy way of getting the top n and this isn't in sorted order.
+	// In real life you should do this better :)
 	String[] out = new String[n];
 	int i = 0;
 	Node curr = least;
@@ -102,6 +109,9 @@ class TopNWordsInFile {
 	return out;
     }
 
+    // This just creates a fake input to the function with all the words
+    // in counts in it for their value's # of times, and then others # of
+    // additional words each in their once.
     static List<String> fakeInput(Map<String, Integer> counts,
 				  int others) {
 	List<String> out = new ArrayList<String>();
@@ -117,6 +127,7 @@ class TopNWordsInFile {
 	return out;
     }    
 
+    // Return the average runtime of running the slow/fast version.
     static double test(int size, int n, int numtrials, boolean fast) {
 	TopNWordsInFile test = new TopNWordsInFile();
 	Map<String, Integer> map = new HashMap<>();
@@ -155,6 +166,7 @@ class TopNWordsInFile {
 	    System.out.println(s);
 	}
 
+	// Test runtime as "file size" increases.
 	System.out.println(
             "Avg slow w 100000: " + test(100000, 100, 30, false));
 	System.out.println(
@@ -170,8 +182,8 @@ class TopNWordsInFile {
             "Avg fast w 300000: " + test(300000, 100, 30, true));
 
 
+	// Test runtime as number of words to report increases.
 	System.out.println("--- with large n's ---");
-	
 	System.out.println(
             "Avg slow w 50k: " + test(500000, 50000, 10, false));
 	System.out.println(
