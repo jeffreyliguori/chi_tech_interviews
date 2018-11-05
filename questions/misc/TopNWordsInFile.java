@@ -1,3 +1,14 @@
+/*
+The question was "Given a file with a bunch of words, return the n most common words in that file.
+
+I did not do any file parsing for this example; I made a list of string words and came up with
+the n most common strings in that list.
+
+I did this two ways; one with a PriorityQueue (basically a heap) and one with a Node class and
+a map, which has a smaller runtime.
+
+*/
+
 import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.Comparator;
